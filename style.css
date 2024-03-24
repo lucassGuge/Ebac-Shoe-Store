@@ -128,16 +128,15 @@ li {
 /* CAtalogo */
 .cat-item {
     overflow: hidden;
+    padding: 0.8em;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
 }
 
 .dados-itens {
     position: relative;
-    width: calc(25% - 5px);
-    max-width: 200px;
     margin: 1px;
     padding: 0.5em;
     background-color: blanchedalmond;
@@ -215,47 +214,65 @@ li {
 
 @media (min-width: 989px) {
 
-    .cat-item,
+
     .dados-itens {
         flex: 1;
-        justify-content: space-around;
         flex-basis: calc(25% - 20px);
+        max-width: 20%;
+
+    }
+
+    .cat-item {
         background-color: #3A5FCD;
     }
 }
 
 @media (max-width: 988px) {
 
-    .cat-item,
+
     .dados-itens {
         flex: 1;
         justify-content: center;
         flex-basis: calc(33% - 20px);
+        max-width: 33%;
+
+    }
+
+    .cat-item {
         background-color: bisque;
     }
 }
 
 @media (max-width: 766px) {
 
-    .cat-item,
+
     .dados-itens {
         flex: 1;
         justify-content: center;
         flex-basis: calc(50% - 20px);
+        max-width: 50%;
+
+
+
+    }
+
+    .cat-item {
         background-color: #3A5FCD;
-
-
     }
 }
 
 @media (max-width: 544px) {
 
-    .cat-item,
+
     .dados-itens {
         flex: 1;
         flex-basis: calc(100% - 20px);
-        background-color: bisque;
+        max-width: 100%;
+
     }
 
+    .cat-item {
+        background-color: bisque;
+    }
 
 }
