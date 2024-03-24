@@ -23,7 +23,7 @@ h3 {
 
 .container {
     flex-direction: column;
-    padding: 2.5em;
+    padding: 0.5em;
     border: solid 1px black;
     width: 100%;
     box-sizing: border-box
@@ -50,6 +50,7 @@ li {
     width: auto;
     border: solid 1px black;
     border-radius: 0.5em;
+    background-color: #001F3F;
 }
 
 .img-header {
@@ -74,6 +75,15 @@ li {
     padding: 0;
 }
 
+/* Div seçôes */
+.div-sec {
+    margin: 0.2em;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    border: solid 1px black;
+    text-align: center;
+    background-color: #001F3F;
+}
 
 /* section */
 .ofertas-div,
@@ -121,19 +131,22 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .dados-itens {
     position: relative;
     width: calc(25% - 5px);
     max-width: 200px;
-    margin: 5px;
+    margin: 1px;
     padding: 0.5em;
     background-color: blanchedalmond;
     border: solid 1px black;
     border-radius: 0.5em;
     text-align: center;
+    flex: 1;
+
+
 
 
 }
@@ -143,10 +156,11 @@ li {
     height: auto;
 
 
+
 }
 
 .info-item {
-    padding: 0.5em;
+    padding: 0em;
 }
 
 .cat-item .leg-item {
@@ -160,10 +174,88 @@ li {
     box-sizing: border-box;
     font-size: 14px;
     text-align: center;
+    margin-bottom: 3em;
 }
 
 /* button */
-button {
-    padding: 1em;
-    text-align: center;
+.btn-addcart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.sobre-div {
+    display: flex;
+}
+
+.coluna-imagem,
+.coluna-texto {
+    flex: 1;
+    width: 50%;
+}
+
+.coluna-imagem img {
+    padding: 0.2em;
+    flex: 1;
+    width: 90%;
+    padding-top: 2em;
+}
+
+.coluna-texto {
+
+    padding: 0.2em;
+}
+
+@media (min-width: 989px) {
+
+    .cat-item,
+    .dados-itens {
+        flex: 1;
+        justify-content: space-around;
+        flex-basis: calc(25% - 20px);
+        background-color: #3A5FCD;
+    }
+}
+
+@media (max-width: 988px) {
+
+    .cat-item,
+    .dados-itens {
+        flex: 1;
+        justify-content: center;
+        flex-basis: calc(33% - 20px);
+        background-color: bisque;
+    }
+}
+
+@media (max-width: 766px) {
+
+    .cat-item,
+    .dados-itens {
+        flex: 1;
+        justify-content: center;
+        flex-basis: calc(50% - 20px);
+        background-color: #3A5FCD;
+
+
+    }
+}
+
+@media (max-width: 544px) {
+
+    .cat-item,
+    .dados-itens {
+        flex: 1;
+        flex-basis: calc(100% - 20px);
+        background-color: bisque;
+    }
+
+
 }
