@@ -192,6 +192,7 @@ li {
 
 .sobre-div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .coluna-imagem,
@@ -254,16 +255,27 @@ li {
 @media (max-width: 640px) {
 
 
-    .dados-itens {
+    .dados-itens,
+    .coluna-imagem,
+    .coluna-texto {
         flex: 1;
         flex-basis: calc(100% - 20px);
         max-width: 100%;
-        background-color: #3A5FCD;
 
+
+    }
+
+    .dados-itens {
+        background-color: #3A5FCD;
     }
 
     .cat-item {
         background-color: bisque;
     }
 
+    .coluna-imagem,
+    .coluna-texto {
+        text-align: center;
+
+    }
 }
